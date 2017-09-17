@@ -8,40 +8,47 @@
 
 ### First you need to train the model
 
-<b>train.py </b>
-> Other options are following :\
-  --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
-  --batch_size      : Batch Size (default: 100)\
-  --dims"           : Dimensions of SVD (default: 15)\
-  --max_epochs      : Dimensions of SVD (default: 25)\
-  --checkpoint_dir  : Checkpoint directory from training run (default: '/save/')\
-  --val             : True if Folders with files and False if single file\
-  --is_gpu          : Want to train model at GPU (default=True)\
-  ** Misc Parameters**\
-  --allow_soft_placement    :Allow device soft device placement\
-  --log_device_placement   :Log placement of ops on devices\
-
+```python train.py```
+ Other options are following :
+ ```
+  --data_file       : Input user-movie-rating information file (default: './ratings.dat')
+  --batch_size      : Batch Size (default: 100)
+  --dims"           : Dimensions of SVD (default: 15)
+  --max_epochs      : Dimensions of SVD (default: 25)
+  --checkpoint_dir  : Checkpoint directory from training run (default: '/save/')
+  --val             : True if Folders with files and False if single file
+  --is_gpu          : Want to train model at GPU (default=True)
+  ```
+  Misc Parameters:
+  ```
+  --allow_soft_placement    :Allow device soft device placement
+  --log_device_placement   :Log placement of ops on devices
+```
 * After training finish, we need to save trained model as well as trained user vs item matrix
   for later use for recommendation.
 
 
 ### Run.py file predict the rating for a given user and movie pair
-<b>run.py</b>
->  --user            : User (default: 1696)")\
-  --item            :Movie (default: 3113)")\
-  --checkpoint_dir  : Checkpoint directory from training run (default: '/save/')\
-  --is_gpu          : Want to train model at GPU (default=True)\
-  ** Misc Parameters**\
-  --allow_soft_placement    :Allow device soft device placement\
-  --log_device_placement   :Log placement of ops on devices\
-
+```python run.py```
+```
+  --user            : User (default: 1696)")
+  --item            :Movie (default: 3113)")
+  --checkpoint_dir  : Checkpoint directory from training run (default: '/save/')
+  --is_gpu          : Want to train model at GPU (default=True)
+  ```
+  Misc Parameters :
+  ```
+  --allow_soft_placement    :Allow device soft device placement
+  --log_device_placement   :Log placement of ops on devices
+```
 ### For find the K-mean clusters
- <b>kmean.py</b>
->  --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
-  --K               : Number of clusters (default=4)\
-  --MAX_ITERS       : Maximum number of iterations (default=1000)\
-  --TRAINED         : Use TRAINED user vs item matrix (default=False)\
-
-output of kmean.py saved in clusters.csv file\
+``` python kmean.py```
+```
+  --data_file       : Input user-movie-rating information file (default: './ratings.dat')
+  --K               : Number of clusters (default=4)
+  --MAX_ITERS       : Maximum number of iterations (default=1000)
+  --TRAINED         : Use TRAINED user vs item matrix (default=False)
+```
+output of kmean.py saved in clusters.csv file
 
 Note: Rest How to use this please go through poc.ipynb file
