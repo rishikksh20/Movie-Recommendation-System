@@ -9,7 +9,6 @@
 ### First you need to train the model
 
 ```python train.py```
- Other options are following :
  ```
   --data_file       : Input user-movie-rating information file (default: './ratings.dat')
   --batch_size      : Batch Size (default: 100)
@@ -49,6 +48,6 @@
   --MAX_ITERS       : Maximum number of iterations (default=1000)
   --TRAINED         : Use TRAINED user vs item matrix (default=False)
 ```
-output of kmean.py saved in clusters.csv file
+output of `kmean.py` saved in `clusters.csv` file
 
 Note: Rest How to use this please go through poc.ipynb file
