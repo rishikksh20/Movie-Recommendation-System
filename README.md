@@ -1,5 +1,5 @@
 ## Recommendation Engine
-** Using SVD algorithm for collaborative filtering.**
+<b> Using SVD algorithm for collaborative filtering.</b>
 
 * First train a model by using available ratings
 * Use that trained model to predict missing rating in users vs items/movies matrix
@@ -8,8 +8,8 @@
 
 ### First you need to train the model
 
-> train.py \
-Other options are following :\
+train.py \
+> Other options are following :\
   --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
   --batch_size      : Batch Size (default: 100)\
   --dims"           : Dimensions of SVD (default: 15)\
@@ -26,8 +26,8 @@ Other options are following :\
 
 
 ### Run.py file predict the rating for a given user and movie pair
-> run.py\
-  --user            : User (default: 1696)")\
+run.py\
+>  --user            : User (default: 1696)")\
   --item            :Movie (default: 3113)")\
   --checkpoint_dir  : Checkpoint directory from training run (default: '/save/')\
   --is_gpu          : Want to train model at GPU (default=True)\
@@ -36,8 +36,8 @@ Other options are following :\
   --log_device_placement   :Log placement of ops on devices\
 
 ### For find the K-mean clusters
-> kmean.py\
-  --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
+ kmean.py\
+>  --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
   --K               : Number of clusters (default=4)\
   --MAX_ITERS       : Maximum number of iterations (default=1000)\
   --TRAINED         : Use TRAINED user vs item matrix (default=False)\
