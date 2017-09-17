@@ -1,4 +1,4 @@
-## Recommendation Engine
+## Movie Recommendation Engine
 <b> Using SVD algorithm for collaborative filtering.</b>
 
 * First train a model by using available ratings
@@ -8,7 +8,7 @@
 
 ### First you need to train the model
 
-train.py \
+<b>train.py </b>
 > Other options are following :\
   --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
   --batch_size      : Batch Size (default: 100)\
@@ -26,7 +26,7 @@ train.py \
 
 
 ### Run.py file predict the rating for a given user and movie pair
-run.py\
+<b>run.py</b>
 >  --user            : User (default: 1696)")\
   --item            :Movie (default: 3113)")\
   --checkpoint_dir  : Checkpoint directory from training run (default: '/save/')\
@@ -36,7 +36,7 @@ run.py\
   --log_device_placement   :Log placement of ops on devices\
 
 ### For find the K-mean clusters
- kmean.py\
+ <b>kmean.py</b>
 >  --data_file       : Input user-movie-rating information file (default: './ratings.dat')\
   --K               : Number of clusters (default=4)\
   --MAX_ITERS       : Maximum number of iterations (default=1000)\
